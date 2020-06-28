@@ -16,7 +16,7 @@ class AddTask extends Component {
                         this.props.onSubmitTodo(e.target.task_input.value);
                         e.target.task_input.value = "";
                     }.bind(this)}>
-                        <input type="text" className="task-input" name="task_input" placeholder="Add a task..."></input>
+                        <input type="text" className="task-input" name="task_input" placeholder="Add a task..." autoComplete="off"></input>
                     </form>
                 </span>
             </div>

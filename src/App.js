@@ -48,6 +48,32 @@ class App extends Component {
                             this.setState({ todos : _arr });
                         }
                     });
+                }.bind(this)}
+                onMemoInput={function(_memo, _id) {
+                    this.state.todos.forEach((el, idx) => {
+                        if(_id === el.id) {
+                            const _arr = Array.from(this.state.todos);
+                            _arr[idx].memo = _memo;
+
+                            localStorage.removeItem('todos');
+                            localStorage.setItem('todos', JSON.stringify(_arr));
+
+                            this.setState({ todos : _arr });
+                        }
+                    });
+                }.bind(this)}
+                onMemoDelete={function(_id) {
+                    this.state.todos.forEach((el, idx) => {
+                        if(el.id === _id) {
+                            const _arr = Array.from(this.state.todos);
+                            _arr[idx].memo = "";
+
+                            localStorage.removeItem('todos');
+                            localStorage.setItem('todos', JSON.stringify(_arr));
+
+                            this.setState({ todos : _arr });
+                        }
+                    });
                 }.bind(this)}></ListItem>);
             }
         });
@@ -78,7 +104,6 @@ class App extends Component {
                             // save data in the local storage
                             localStorage.setItem('todos', JSON.stringify(arr));
                             this.setState({ todos : arr });
-                            console.log(arr);
                         }
                     }.bind(this)}></AddTask>
                     <div className="list-div">

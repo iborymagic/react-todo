@@ -91,7 +91,6 @@
 }
 
 .item-memo {
-    display : none; /* 나중에 메모 생기면 javascript로 display 보이게 하기 */
     float : left;
     margin : 0;
     padding : 0;
@@ -100,8 +99,50 @@
     width : 80%;
     /*border : 1px solid red;*/
     text-align : left;
-    font-size : 0.9em;
+    font-size : 0.8em;
     color : #A4ADB7;
+}
+
+.item-memo-close {
+    display : none;
+}
+
+.item-memo-open {
+    display : inline;
+}
+
+.item-memo-input {
+    margin : 0;
+    padding : 6px;
+    padding-left : 10px;
+    text-align : left;
+    font-size : 0.8em;
+    color : #A4ADB7;
+    background-color: #343A3F;
+    border : 1px solid #2d3033;
+    outline : none;
+    border-radius : 3px;
+    caret-color: #E2EAF3;
+    width : 81%;
+}
+
+.item-memo-input-close {
+    display : none;
+}
+
+.item-memo-input-open {
+    display : inline;
+    animation : inputs-show 300ms ease-out;
+}
+
+@keyframes inputs-show {
+    from {
+        opacity : 0;
+        transform : translate(0, -50%);
+    } to {
+        opacity : 1;
+        transform: translate(0, 0);
+    }
 }
 
 .item-div .item-tooltip {
@@ -214,6 +255,19 @@
     transform: scaleY(0.9);
 }
 
+.item-tooltip-li .item-memo-delete-icon {
+    margin-top : 1px;
+    margin-left : 0;
+    margin-right : 10px;
+    padding : 0;
+    width : 13px;
+    height : 13px;
+    background-image: url("../img/eraser.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .item-tooltip-li .item-delete-icon {
     margin-top : 1px;
     margin-left : 0;
@@ -229,10 +283,15 @@
 
 .item-tooltip-li .item-pin-text,
 .item-tooltip-li .item-memo-text,
-.item-tooltip-li .item-delete-text {
+.item-tooltip-li .item-delete-text,
+.item-tooltip-li .item-memo-delete-text {
     text-align: left;
     width : 80px;
     font-size : 0.75em;
     color : #A3ADB8;
     cursor : pointer;
+}
+
+.memo-unable {
+    display : none;
 }

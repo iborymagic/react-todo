@@ -26,8 +26,8 @@ class ListItem extends Component {
                     <div className="item-todo">{this.state.todo.text}</div>
                     <div className="item-pin"></div>
                     <div className="item-menu" id={`item-menu-${item_id}`} onClick={function() {
-                        document.querySelector(`#item-tooltip-${item_id}`).classList.toggle('item-tooltip-open');
-                        document.querySelector(`#item-tooltip-${item_id}`).classList.toggle('item-tooltip-close');
+                        document.getElementById(`item-tooltip-${item_id}`).classList.toggle('item-tooltip-open');
+                        document.getElementById(`item-tooltip-${item_id}`).classList.toggle('item-tooltip-close');
                     }.bind(this)}></div>
                     <div className="item-tooltip">
                         <ul className="item-tooltip-ul item-tooltip-close" id={`item-tooltip-${item_id}`}>
@@ -41,7 +41,9 @@ class ListItem extends Component {
                             </li>
                             <li className="item-tooltip-li">
                                 <div className="item-delete-icon"></div>
-                                <div className="item-delete-text">Delete</div>
+                                <div className="item-delete-text" onClick={function() {
+                                    this.props.onDelete(item_id);
+                                }.bind(this)}>Delete</div>
                             </li>
                         </ul>
                     </div>

@@ -2,10 +2,6 @@ import React, {Component} from 'react';
 import './AddTask.css';
 
 class AddTask extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     shouldComponentUpdate(newProps, newState) {
         return newProps !== this.props;
     }
@@ -18,7 +14,6 @@ class AddTask extends Component {
                     <form onSubmit={function(e) {
                         e.preventDefault();
                         this.props.onSubmitTodo(e.target.task_input.value);
-                        {/*document.querySelector('.task-input').value = "";*/}
                         e.target.task_input.value = "";
                     }.bind(this)}>
                         <input type="text" className="task-input" name="task_input" placeholder="Add a task..."></input>

@@ -16,7 +16,7 @@ class App extends Component {
     componentDidMount() {
         // get data from the local storage
         const todoArr = JSON.parse(localStorage.getItem('todos'));
-        if(todoArr) this.state.todos = todoArr;
+        if(todoArr) this.setState({ todos : todoArr });
     }
 
     render() {
@@ -35,6 +35,19 @@ class App extends Component {
                             this.setState({ todos : _arr });
                         }
                     });            
+                }.bind(this)}
+                onDelete={function(item_id) {
+                    this.state.todos.forEach((el, idx) => {
+                        if(el.id === item_id) {
+                            const _arr = Array.from(this.state.todos);
+                            _arr.splice(idx, 1);
+
+                            localStorage.removeItem('todos');
+                            localStorage.setItem('todos', JSON.stringify(_arr));
+
+                            this.setState({ todos : _arr });
+                        }
+                    });
                 }.bind(this)}></ListItem>);
             }
         });
@@ -57,7 +70,7 @@ class App extends Component {
                             arr.push({
                                 id : this.state.todos.length > 0 ? this.state.todos[this.state.todos.length - 1].id + 1 : 0,
                                 text : _text,
-                                memo : null,
+                                memo : "",
                                 pinned : false,
                                 done : false,
                                 date : this.state.today

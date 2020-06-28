@@ -86,6 +86,10 @@
     cursor : pointer;
 }
 
+.item-div .item-menu:active {
+    height : 16px;
+}
+
 .item-memo {
     display : none; /* 나중에 메모 생기면 javascript로 display 보이게 하기 */
     float : left;
@@ -101,9 +105,8 @@
 }
 
 .item-div .item-tooltip {
-    position : absolute;
-    top : 10%;
-    left : 66%;
+    position: absolute;
+    transform: translate(191%, 40%);
 }
 
 .item-tooltip-open {

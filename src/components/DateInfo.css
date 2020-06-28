@@ -25,6 +25,10 @@
     cursor: pointer;
 }
 
+.date-div .date-prev:active {
+    color: #575b63;
+}
+
 .date-div .date-next {
     position : absolute;
     left : 77%;
@@ -37,6 +41,9 @@
     cursor: pointer;
 }
 
+.date-div .date-next:active {
+    color: #575b63;
+}
 .date-div .date-datetext {
     display : inline-block;
     height : 80px;

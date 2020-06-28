@@ -1,0 +1,235 @@
+.item {
+    margin : 0;
+    padding : 0;
+    /*border : 1px solid blue;*/
+}
+
+.item-div {
+    position : static;
+    width : 100%;
+    flex-grow : 10;
+    /*border : 1px solid tomato;*/
+    margin : 0%;
+    display : flex;
+    flex-direction: row;
+}
+
+.item-div .item-check {
+    display : none;
+}
+
+.item-div .item-label {
+    /*float : left;*/
+    width : 15px;
+    height : 15px;
+    margin : 10px;
+    margin-left : 2px;
+    background-color: #494F58;
+    border : 1px solid #2d3033;
+    border-radius: 2px;
+    /*box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);*/
+}
+
+.item-div .item-check:checked + .item-label {
+    background-color: #494F58;
+    border : 1px solid #2d3033;
+    border-radius: 2px;
+    background-image: url("../img/check.svg");
+    background-size: contain;
+}
+
+.item-div .item-label:hover {
+    background-color: #606872;
+}
+
+.item-div .item-label:active {
+    background-color: #383f47;
+}
+
+.item-div .item-todo {
+    margin : 1.9%;
+    width : 80%;
+    font-size : 0.9em;
+    color : #E2EAF3;
+    text-align : left;
+    overflow-x : hidden;
+
+}
+
+.item-div .item-pin {
+    width : 3.5%;
+    height : 20px;
+    background-image: url("../img/pin.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    margin-top : 2.7%;
+    margin-left : 1%;
+    margin-right : 1%;
+    margin-bottom : 0;
+}
+
+.item-div .item-menu {
+    /*float : right;*/
+    width : 3.5%;
+    height : 20px;
+    background-image: url("../img/dots.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    margin-top : 2.7%;
+    margin-left : 1%;
+    margin-right : 1%;
+    margin-bottom : 0;
+    cursor : pointer;
+}
+
+.item-memo {
+    display : none; /* 나중에 메모 생기면 javascript로 display 보이게 하기 */
+    float : left;
+    margin : 0;
+    padding : 0;
+    margin-left : 35px;
+    margin-bottom : 5px;
+    width : 80%;
+    /*border : 1px solid red;*/
+    text-align : left;
+    font-size : 0.9em;
+    color : #A4ADB7;
+}
+
+.item-div .item-tooltip {
+    position : absolute;
+    top : 10%;
+    left : 66%;
+}
+
+.item-tooltip-open {
+    list-style: none;
+    border-radius: 5px;
+    margin : 0;
+    padding-left : 10px;
+    padding-right : 12px;
+    padding-top : 5px;
+    padding-bottom : 10px;
+    background-color: #484F58;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 1px 3px rgba(0, 0, 0, 0.02);
+    opacity: 1;
+    display: block;
+    animation : tooltips-show 100ms ease-out;
+}
+
+@keyframes tooltips-show {
+    from {
+        opacity : 0;
+        transform : translate(0, -20%);
+    } to {
+        opacity : 1;
+        transform: translate(0, 0);
+    }
+}
+
+.item-tooltip-close {
+    list-style: none;
+    border-radius: 5px;
+    margin : 0;
+    padding-left : 10px;
+    padding-right : 12px;
+    padding-top : 5px;
+    padding-bottom : 10px;
+    background-color: #484F58;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 1px 3px rgba(0, 0, 0, 0.02);
+    opacity : 0;
+    display : none; 
+}
+
+.item-div .item-tooltip-ul {
+    z-index: 1;
+}
+
+/*
+.item-div .item-tooltip-ul {
+    list-style: none;
+    border-radius: 5px;
+    margin : 0;
+    padding-left : 10px;
+    padding-right : 12px;
+    padding-top : 5px;
+    padding-bottom : 10px;
+    background-color: #484F58;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 1px 3px rgba(0, 0, 0, 0.02);
+    opacity : 0;
+    display : none; 
+}
+*/
+.item-div .item-tooltip-ul:before {
+    content : '';
+    position : absolute;
+    left : 114px;
+    top : -4px;
+    width : 7px;
+    height : 7px;
+    transform: rotate(45deg);
+    background-color: #484F58;
+}
+
+.item-tooltip-li {
+    height : 25px;
+    width : 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item-tooltip-li .item-pin-icon {
+    margin-top : 1px;
+    margin-left : 1px;
+    margin-right : 10px;
+    padding : 0;
+    width : 13px;
+    height : 13px;
+    background-image: url("../img/pin_menu.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item-tooltip-li .item-memo-icon {
+    margin-top : 1px;
+    margin-left : 0;
+    margin-right : 10px;
+    padding : 0;
+    width : 13px;
+    height : 13px;
+    background-image: url("../img/memo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scaleY(0.9);
+}
+
+.item-tooltip-li .item-delete-icon {
+    margin-top : 1px;
+    margin-left : 0;
+    margin-right : 10px;
+    padding : 0;
+    width : 13px;
+    height : 13px;
+    background-image: url("../img/delete.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item-tooltip-li .item-pin-text,
+.item-tooltip-li .item-memo-text,
+.item-tooltip-li .item-delete-text {
+    text-align: left;
+    width : 80px;
+    font-size : 0.75em;
+    color : #A3ADB8;
+    cursor : pointer;
+}

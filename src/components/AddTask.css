@@ -1,0 +1,53 @@
+.task-div {
+    position : relative;
+    width : 76%;
+    height : 5.5%;
+    /*flex-grow : 1.1;*/
+    border : 1px solid #2d3033;
+    margin-left : 12%;
+    margin-right : 12%;
+    margin-top : 0;
+    margin-bottom : 0;
+    border-radius : 5px;
+    background-color: #343A3F;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+}
+
+.task-div .task-form {
+    display : inline-block;
+    margin : 0;
+    padding : 0;
+}
+
+.task-div .task-icon {
+    position : absolute;
+    display : inline-block;
+    left : 10px;
+    height : 20px;
+    width : 20px;
+    margin : 0;
+    margin-right : 5px;
+    padding : 0;
+    border : 0;
+    background-image : url("../img/list.svg");
+    background-size: contain;
+}
+
+.task-div .task-form .task-input {
+    position : absolute;
+    background-color : transparent;
+    left : 40px;
+    top : 0;
+    color : #E2EAF3;
+    border : none;
+    outline : none;
+    height : 20px;
+    width : 325px;
+    margin : 0;
+    margin-top : 8px;
+    padding : 0;
+    padding-left : 5px;
+    caret-color: #E2EAF3;
+}

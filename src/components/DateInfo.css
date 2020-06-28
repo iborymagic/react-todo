@@ -1,0 +1,62 @@
+.date-div {
+    position : relative;
+    width : 76%;
+    /*flex-grow : 2.5;*/
+    height : 26%;
+    margin-left : 12%;
+    margin-right : 12%;
+    margin-top : 0;
+    margin-bottom : 0;
+    display : flex;
+    justify-content : center;
+    align-items: center;
+
+}
+
+.date-div .date-prev {
+    position : absolute;
+    left : 15%;
+    width : 30px;
+    height : 30px;
+    transform:scale(1, 1.5);
+    font-size : 1.5em;
+    font-weight: 300;
+    color : #7B8188;
+    cursor: pointer;
+}
+
+.date-div .date-next {
+    position : absolute;
+    left : 77%;
+    width : 30px;
+    height : 30px;
+    transform:scale(1, 1.5);
+    font-size : 1.5em;
+    font-weight: 300;
+    color : #7B8188;
+    cursor: pointer;
+}
+
+.date-div .date-datetext {
+    display : inline-block;
+    height : 80px;
+    text-align: center;
+}
+
+.date-div .date-datetext .date-datetext-day {
+    display: inline-block;
+    margin-right : 5%;
+    margin-left : 5%;
+    margin-bottom: 2%;
+    margin-top : 5%;
+    font-weight: 600;
+    font-size : 1.6em;
+    color : #E2EAF3;
+}
+
+.date-div .date-datetext .date-datetext-monthyear {
+    display: inline-block;
+    font-weight: 400;
+    font-size : 1em;
+    color : #7B8188;
+}

@@ -1,11 +1,11 @@
 .task-div {
     position : relative;
-    width : 76%;
+    width : 78%;
     height : 5.5%;
     /*flex-grow : 1.1;*/
     border : 1px solid #2d3033;
-    margin-left : 12%;
-    margin-right : 12%;
+    margin-left : 11%;
+    margin-right : 11%;
     margin-top : 0;
     margin-bottom : 0;
     border-radius : 5px;

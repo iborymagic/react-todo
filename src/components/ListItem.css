@@ -23,7 +23,7 @@
     width : 15px;
     height : 15px;
     margin : 10px;
-    margin-left : 2px;
+    margin-left : 0px;
     background-color: #494F58;
     border : 1px solid #2d3033;
     border-radius: 2px;
@@ -147,7 +147,7 @@
 
 .item-div .item-tooltip {
     position: absolute;
-    transform: translate(167%, 10%); /* 191%, 40% */
+    transform: translate(177%, 10%); /* 191%, 40% */
     z-index : 950;
 }
 

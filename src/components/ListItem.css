@@ -147,7 +147,8 @@
 
 .item-div .item-tooltip {
     position: absolute;
-    transform: translate(191%, 40%);
+    transform: translate(167%, 10%); /* 191%, 40% */
+    z-index : 950;
 }
 
 .item-tooltip-open {
@@ -206,13 +207,14 @@
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 1px 3px rgba(0, 0, 0, 0.02);
     opacity : 0;
     display : none; 
+    animation : tooltips-show 100ms ease-out;
 }
 */
 .item-div .item-tooltip-ul:before {
     content : '';
     position : absolute;
-    left : 114px;
-    top : -4px;
+    left : 129px; /* 114px */
+    top : 8px; /* -4px */
     width : 7px;
     height : 7px;
     transform: rotate(45deg);
@@ -220,7 +222,7 @@
 }
 
 .item-tooltip-li {
-    height : 25px;
+    height : 24px;
     width : 110px;
     display: flex;
     flex-direction: row;
@@ -239,6 +241,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.pin-icon-invisible {
+    visibility: hidden;
 }
 
 .item-tooltip-li .item-memo-icon {
@@ -281,10 +287,25 @@
     background-position: center;
 }
 
+.item-tooltip-li .item-pin-out-icon {
+    margin-top : 5px;
+    margin-left : 0;
+    margin-right : 10px;
+    padding : 0;
+    width : 13px;
+    height : 13px;
+    transform : scale(1.2, 1.2);
+    background-image: url("../img/pin_out.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .item-tooltip-li .item-pin-text,
 .item-tooltip-li .item-memo-text,
 .item-tooltip-li .item-delete-text,
-.item-tooltip-li .item-memo-delete-text {
+.item-tooltip-li .item-memo-delete-text,
+.item-tooltip-li .item-pin-out-text {
     text-align: left;
     width : 80px;
     font-size : 0.75em;
@@ -294,4 +315,25 @@
 
 .memo-unable {
     display : none;
+}
+
+.pin-unable {
+    display : none;
+}
+
+.pin-bottom:after { /* attach to the item(item div) */
+    content : "";
+    display : block;
+    width : 100%;
+    padding-bottom : 5px;
+    border-bottom : 1px solid #2d3033;
+}
+
+.pin-bottom-memo:after { /* attach to the item-memo */
+    content : "";
+    display : block;
+    width : 125%;
+    transform : translateX(-9%);
+    padding-bottom : 15px;
+    border-bottom : 1px solid #2d3033;
 }

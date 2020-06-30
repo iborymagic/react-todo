@@ -62,7 +62,24 @@
   /*flex-grow : 10;*/
   /*border : 1px solid lime;*/
   margin-left : 12%;
-  margin-right : 12%;
+  padding-right : 12%;
+  padding-bottom : 13%;
+  margin-right : 0;
   margin-top : 10px;
   margin-bottom : 0;
+  overflow-y : scroll;
+}
+
+.list-div::-webkit-scrollbar {
+  display : none;
+}
+
+.blank {
+  position : fixed;
+  left : 10%;
+  top : 90%;
+  width : 80%;
+  height : 10%;
+  z-index : 5;
+  background-color : #3C4249;
 }

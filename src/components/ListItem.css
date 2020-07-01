@@ -73,16 +73,16 @@
 
 .item-div .item-menu {
     /*float : right;*/
-    width : 4%;
-    height : 20px;
+    width : 40px;
+    height : 15px;
     background-image: url("../img/dots.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    margin-top : 2%;
-    margin-left : 1%;
-    margin-right : 1%;
+    margin-top : 3%;
+    margin-left : 3%;
+    margin-right : 0;
     margin-bottom : 0;
     cursor : pointer;
 }
@@ -95,7 +95,7 @@
     float : left;
     margin : 0;
     padding : 0;
-    margin-left : 15%;
+    margin-left : 14.2%;
     margin-bottom : 5px;
     width : 80%;
     /*border : 1px solid red;*/
@@ -327,17 +327,18 @@
 .pin-bottom:after { /* attach to the item(item div) */
     content : "";
     display : block;
-    width : 93%;
+    width : 91.5%;
     padding-bottom : 5px;
     border-bottom : 1px solid #2d3033;
     margin-left : 6.5%;
+    transform : translateX(-0.2%);
 }
 
 .pin-bottom-memo:after { /* attach to the item-memo */
     content : "";
     display : block;
-    width : 116.5%;
-    transform : translateX(-9.5%);
+    width : 114%;
+    transform : translateX(-9.2%);
     padding-bottom : 15px;
     border-bottom : 1px solid #2d3033;
 }

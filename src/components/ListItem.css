@@ -20,10 +20,11 @@
 
 .item-div .item-label {
     /*float : left;*/
-    width : 15px;
-    height : 15px;
+    width : 18px;
+    height : 17px;
     margin : 10px;
     margin-left : 0px;
+    margin-right : 6px;
     background-color: #494F58;
     border : 1px solid #2d3033;
     border-radius: 2px;
@@ -95,7 +96,7 @@
     float : left;
     margin : 0;
     padding : 0;
-    margin-left : 14.2%;
+    margin-left : 14%;
     margin-bottom : 5px;
     width : 80%;
     /*border : 1px solid red;*/

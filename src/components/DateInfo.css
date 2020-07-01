@@ -15,7 +15,7 @@
 
 .date-div .date-prev {
     position : absolute;
-    left : 15%;
+    left : 18%;
     width : 30px;
     height : 30px;
     transform:scale(1, 1.5);
@@ -31,7 +31,7 @@
 
 .date-div .date-next {
     position : absolute;
-    left : 77%;
+    left : 74.5%;
     width : 30px;
     height : 30px;
     transform:scale(1, 1.5);

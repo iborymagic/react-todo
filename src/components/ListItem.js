@@ -12,9 +12,11 @@ class ListItem extends Component {
     render() {
         const item_id = this.state.todo.id;
         return(
-            <div className={this.state.todo.memo ? `item-${item_id}` : (this.props.last_id === item_id ? `item-${item_id} pin-bottom` : `item-${item_id}`)}>
+            <div className={this.state.todo.memo ? `item-${item_id}` : (this.props.last_ids.includes(item_id) ? `item-${item_id} pin-bottom` : `item-${item_id}`)}>
+                {/*만약 last_ids 중에 item_id와 같은 것이 있다면. */}
                 <div className="item-div">
                     {/*<input type="checkbox" className="item-check" id={`item-check-${item_id}`}></input>*/}
+                    <div className={this.state.todo.pinned ? "item-pin" : "item-pin pin-icon-invisible"} id={`item-pin-${item_id}`}></div>
                     {this.state.todo.done ? 
                     <input type="checkbox" className="item-check" id={`item-check-${item_id}`} onChange={function() {
                         this.props.onCheckChanged(item_id);
@@ -24,7 +26,7 @@ class ListItem extends Component {
                     }.bind(this)}></input>}
                     <label htmlFor={`item-check-${item_id}`} className="item-label"></label>
                     <div className="item-todo">{this.state.todo.text}</div>
-                    <div className={this.state.todo.pinned ? "item-pin" : "item-pin pin-icon-invisible"} id={`item-pin-${item_id}`}></div>
+                    {/*<div className={this.state.todo.pinned ? "item-pin" : "item-pin pin-icon-invisible"} id={`item-pin-${item_id}`}></div>*/}
                     <div className="item-menu" id={`item-menu-${item_id}`} onClick={function(e) {
                         /* close every menu different from menu that i clicked this time(among open ones). */
                         const others = document.getElementsByClassName('item-tooltip-open');
@@ -115,7 +117,7 @@ class ListItem extends Component {
                     <input type="text" name="memo_input" className="item-memo-input item-memo-input-close" id={`item-memo-input-${item_id}`} placeholder="Add a memo..." autoComplete="off"></input>
 
                 </form>
-                <div className={!this.state.todo.memo ? "item-memo item-memo-close" : (this.props.last_id === item_id ? "item-memo item-memo-open pin-bottom-memo" : "item-memo item-memo-open")} id={`item-memo-${item_id}`}>{this.state.todo.memo}</div>
+                <div className={!this.state.todo.memo ? "item-memo item-memo-close" : (this.props.last_ids.includes(item_id) ? "item-memo item-memo-open pin-bottom-memo" : "item-memo item-memo-open")} id={`item-memo-${item_id}`}>{this.state.todo.memo}</div>
             </div>
         );
     }

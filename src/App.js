@@ -21,15 +21,28 @@ class App extends Component {
 
     render() {
         const itemArr = [];
+        let dividedByDate = [];
         const pinnedTodos = this.state.todos.filter(el => el.pinned);
+        // pinnedTodos에서 날짜를 가지고 분류를 해야 함.
+        // 만약 기존 배열에서 내 날짜를 가진 애가 있으면 패스, 없으면 들어가기
+        let cnt = 0;
+        console.log(pinnedTodos);
+        console.log('-');
+        pinnedTodos.forEach((el, idx) => {
+            if(idx > 0 && el.date !== pinnedTodos[idx - 1].date) {
+                cnt++;
+            }
+            dividedByDate[cnt] = el;
+        });
+        console.log(dividedByDate);
         
-        let lastPinId = -10;
-        if(pinnedTodos.length > 0) {
-            lastPinId = pinnedTodos[pinnedTodos.length - 1].id;
+        let lastPinIds = [];
+        if(dividedByDate.length > 0) {
+            lastPinIds = dividedByDate.map(el => el.id);
         }
         this.state.todos.map(cur => {
             if(cur.date === this.state.today) {
-                itemArr.push(<ListItem key={cur.id} todo={cur} last_id={lastPinId} onCheckChanged={function(item_id) {
+                itemArr.push(<ListItem key={cur.id} todo={cur} last_ids={lastPinIds} onCheckChanged={function(item_id) {
                     let i = 0;
                     const len = this.state.todos.length;
                     
@@ -37,6 +50,8 @@ class App extends Component {
                         if(this.state.todos[i].id === item_id) {
                             const _arr = Array.from(this.state.todos);
                             _arr[i].done = !_arr[i].done;
+
+                            /*_arr.sort((a, b) => new Date(a).date - new Date(b).date);*/
 
                             localStorage.removeItem('todos');
                             localStorage.setItem('todos', JSON.stringify(_arr));
@@ -67,6 +82,8 @@ class App extends Component {
                             const _arr = Array.from(this.state.todos);
                             _arr.splice(i, 1);
 
+                            /*_arr.sort((a, b) => new Date(a).date - new Date(b).date);*/
+
                             localStorage.removeItem('todos');
                             localStorage.setItem('todos', JSON.stringify(_arr));
 
@@ -74,18 +91,6 @@ class App extends Component {
                             break;
                         }
                     }
-                    /*
-                    this.state.todos.forEach((el, idx) => {
-                        if(el.id === item_id) {
-                            const _arr = Array.from(this.state.todos);
-                            _arr.splice(idx, 1);
-
-                            localStorage.removeItem('todos');
-                            localStorage.setItem('todos', JSON.stringify(_arr));
-
-                            this.setState({ todos : _arr });
-                        }
-                    });*/
                 }.bind(this)}
                 onMemoInput={function(_memo, _id) {
                     let i = 0;
@@ -96,6 +101,8 @@ class App extends Component {
                             const _arr = Array.from(this.state.todos);
                             _arr[i].memo = _memo;
 
+                            /*_arr.sort((a, b) => new Date(a).date - new Date(b).date);*/
+
                             localStorage.removeItem('todos');
                             localStorage.setItem('todos', JSON.stringify(_arr));
 
@@ -103,18 +110,6 @@ class App extends Component {
                             break;
                         }
                     }
-                    /*
-                    this.state.todos.forEach((el, idx) => {
-                        if(_id === el.id) {
-                            const _arr = Array.from(this.state.todos);
-                            _arr[idx].memo = _memo;
-
-                            localStorage.removeItem('todos');
-                            localStorage.setItem('todos', JSON.stringify(_arr));
-
-                            this.setState({ todos : _arr });
-                        }
-                    });*/
                 }.bind(this)}
                 onMemoDelete={function(_id) {
                     let i = 0;
@@ -125,6 +120,8 @@ class App extends Component {
                             const _arr = Array.from(this.state.todos);
                             _arr[i].memo = "";
 
+                            /*_arr.sort((a, b) => new Date(a).date - new Date(b).date);*/
+
                             localStorage.removeItem('todos');
                             localStorage.setItem('todos', JSON.stringify(_arr));
 
@@ -132,18 +129,6 @@ class App extends Component {
                             break;
                         }
                     }
-                    /*
-                    this.state.todos.forEach((el, idx) => {
-                        if(el.id === _id) {
-                            const _arr = Array.from(this.state.todos);
-                            _arr[idx].memo = "";
-
-                            localStorage.removeItem('todos');
-                            localStorage.setItem('todos', JSON.stringify(_arr));
-
-                            this.setState({ todos : _arr });
-                        }
-                    });*/
                 }.bind(this)}
                 onPin={function(_id) {
                     let i = 0;
@@ -157,6 +142,8 @@ class App extends Component {
                             tmp.pinned = true;
                             _arr.unshift(tmp);
 
+                            _arr.sort((a, b) => new Date(a.date) - new Date(b.date));
+
                             localStorage.removeItem('todos');
                             localStorage.setItem('todos', JSON.stringify(_arr));
 
@@ -164,20 +151,6 @@ class App extends Component {
                             break;
                         }
                     }
-                    /*
-                    this.state.todos.forEach((el, idx) => {
-                        if(el.id === _id) {
-                            const _arr = Array.from(this.state.todos);
-                            _arr.splice(idx, 1);
-                            el.pinned = true;
-                            _arr.unshift(el);
-
-                            localStorage.removeItem('todos');
-                            localStorage.setItem('todos', JSON.stringify(_arr));
-
-                            this.setState({ todos : _arr });
-                        }
-                    });*/
                 }.bind(this)}
                 onPinOut={function(_id) {
                     let i = 0;
@@ -190,6 +163,8 @@ class App extends Component {
                             _arr.splice(i, 1);
                             tmp.pinned = false;
                             _arr.push(tmp);
+
+                            /*_arr.sort((a, b) => new Date(a).date - new Date(b).date);*/
                             
                             localStorage.removeItem('todos');
                             localStorage.setItem('todos', JSON.stringify(_arr));
@@ -198,20 +173,6 @@ class App extends Component {
                             break;
                         }
                     }
-                    /*
-                    this.state.todos.forEach((el, idx) => {
-                        if(el.id === _id) {
-                            const _arr = Array.from(this.state.todos);
-                            _arr.splice(idx, 1);
-                            el.pinned = false;
-                            _arr.push(el);
-                            
-                            localStorage.removeItem('todos');
-                            localStorage.setItem('todos', JSON.stringify(_arr));
-
-                            this.setState({ todos : _arr });
-                        }
-                    });*/
                 }.bind(this)}></ListItem>);
             }
         });
@@ -251,6 +212,7 @@ class App extends Component {
                                 date : this.state.today
                             });
                             // save data in the local storage
+                            /*arr.sort((a, b) => new Date(a.date) - new Date(b.date));*/
                             localStorage.setItem('todos', JSON.stringify(arr));
                             this.setState({ todos : arr });
                         }

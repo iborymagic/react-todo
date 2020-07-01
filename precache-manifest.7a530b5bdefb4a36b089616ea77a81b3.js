@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "927236c516364984422942e9aed8009c",
+    "revision": "bf252f0724ef751f9b29a10d5ca2c5c4",
     "url": "/react-todo/index.html"
   },
   {
-    "revision": "663119f3f5e7fc46b382",
-    "url": "/react-todo/static/css/main.51115ce3.chunk.css"
+    "revision": "38db2a15818904151ac7",
+    "url": "/react-todo/static/css/main.d631916b.chunk.css"
   },
   {
     "revision": "9d06cc764a8a5c6c430e",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-todo/static/js/2.3c7fac71.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "663119f3f5e7fc46b382",
-    "url": "/react-todo/static/js/main.fb298695.chunk.js"
+    "revision": "38db2a15818904151ac7",
+    "url": "/react-todo/static/js/main.face3262.chunk.js"
   },
   {
     "revision": "8b60092a6ae08cc228b0",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-todo/static/media/delete.49a6f111.svg"
   },
   {
-    "revision": "2cf13a7567958346a40325b0a7805059",
-    "url": "/react-todo/static/media/dots.2cf13a75.svg"
+    "revision": "165c0954d063989944961ce761d64d8d",
+    "url": "/react-todo/static/media/dots.165c0954.svg"
   },
   {
     "revision": "66c01ec98ea86b18abdd47baad2cb17e",

@@ -26,15 +26,12 @@ class App extends Component {
         // pinnedTodos에서 날짜를 가지고 분류를 해야 함.
         // 만약 기존 배열에서 내 날짜를 가진 애가 있으면 패스, 없으면 들어가기
         let cnt = 0;
-        console.log(pinnedTodos);
-        console.log('-');
         pinnedTodos.forEach((el, idx) => {
             if(idx > 0 && el.date !== pinnedTodos[idx - 1].date) {
                 cnt++;
             }
             dividedByDate[cnt] = el;
         });
-        console.log(dividedByDate);
         
         let lastPinIds = [];
         if(dividedByDate.length > 0) {

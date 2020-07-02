@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Daily-todos
 Made a todo-list with react.js.
-### Design from [Jihye Leee](http://jihyeleee.com/).
+### Design from [Jihye Leee](http://jihyeleee.com/)
 <br />
 <br />
 

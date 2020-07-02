@@ -4,7 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Made a todo-list with react.js.
 ### Design from [Jihye Leee](http://jihyeleee.com/)
 <br />
-<br />
 
 Daily-Todos : [https://iborymagic.github.io/react-todo/](https://iborymagic.github.io/react-todo/)  
 

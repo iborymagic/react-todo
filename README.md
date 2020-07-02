@@ -26,6 +26,7 @@ Dribbble에 Jihye Leee님이 [멋진 디자인](https://dribbble.com/shots/33841
 테스트할 때는 배경에 일러스트를 박아넣었는데  
 허락 없이 쓰면 안될거 같아가지고 그냥 그래디언트로 처리했어요.  
 
+---
 배경 수정 전  
 ![todolist capture](https://user-images.githubusercontent.com/42052110/86330962-62a5eb80-bc83-11ea-9502-b73d610c2c1b.PNG)  
 

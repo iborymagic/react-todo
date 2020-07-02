@@ -13,11 +13,11 @@ Daily-Todos 결과물 : [https://iborymagic.github.io/react-todo/](https://ibory
 그걸 바탕으로 한 번 만들어봤습니다.  
 너그럽게도 흔쾌히 허락해주셨습니다. 감사합니당  
 
-1. checkbox로 일 했는지 / 안했는지 체크
-2. pin on the top / unpin : 중요한 건 상단에다가 박아놔야지.
-3. Add a memo / Delete memo : 할 일 밑에다가 메모를 추가/삭제할 수 있음.
+1. Checkbox로 일 했는지 / 안했는지 체크
+2. Pin on the top / unpin : 중요한 건 상단에다가.
+3. Add a memo / Delete memo : 할 일 밑에다가 메모를 추가/삭제.
 4. Delete : 하기 싫어진 일은 바로 삭제.
-5. 날짜마다 todo를 작성하고, localStorage로 기억 : 과거의 todo를 되돌아보며 자신의 나태함을 반성하도록.
+5. Save lists in the localStorage : 과거의 기록을 되돌아보며 자신의 나태함을 반성하도록.
 
 원본 디자인을 보면 메뉴 버튼 아래에 툴팁 메뉴가 생성되는데  
 그게 아래에 있는 메뉴 버튼을 가리는 불상사가 발생하더라구요.  

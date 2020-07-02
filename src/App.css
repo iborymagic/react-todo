@@ -4,7 +4,8 @@
 }
 
 .background {
-  background-image: url("./img/1.jpg");
+  /*background-image: url("./img/1.jpg");*/
+  background : linear-gradient(155deg, #F06291 50%, #E55C8B 50%);
   position : absolute;
   z-index : -5;
   margin: 0;

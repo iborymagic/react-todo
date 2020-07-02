@@ -6,7 +6,7 @@ Made a todo-list with react.js.
 <br />
 <br />
 
-Daily-Todos 결과물 : [https://iborymagic.github.io/react-todo/](https://iborymagic.github.io/react-todo/)  
+Daily-Todos : [https://iborymagic.github.io/react-todo/](https://iborymagic.github.io/react-todo/)  
 
 이쁜 todo list입니다.  
 Dribbble에 Jihye Leee님이 [멋진 디자인](https://dribbble.com/shots/3384144-Hello-Dribbble)을 올려놓으셔서  

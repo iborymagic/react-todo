@@ -1,68 +1,27 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Daily-todos
+Made a todo-list with react.js.
+Design from [Jihye Leee](http://jihyeleee.com/).
+---
+[Daily-Todos 결과물] : [https://iborymagic.github.io/react-todo/](https://iborymagic.github.io/react-todo/)
 
-In the project directory, you can run:
+이쁜 todo list입니다.
+[Dribbble에 Jihye Leee님이 멋진 디자인](https://dribbble.com/shots/3384144-Hello-Dribbble)을 올려놓으셔서
+그걸 바탕으로 한 번 만들어봤습니다. 
+너그럽게도 흔쾌히 허락해주셨습니다. 감사합니당
 
-### `npm start`
+1. checkbox로 일 했는지 / 안했는지 체크
+2. pin on the top / unpin : 중요한 건 상단에다가 박아놔야지.
+3. Add a memo / Delete memo : 할 일 밑에다가 메모를 추가/삭제할 수 있음.
+4. Delete : 하기 싫어진 일은 바로 삭제.
+5. 날짜마다 todo를 작성하고, localStorage로 기억 : 과거의 todo를 되돌아보며 자신의 나태함을 반성하도록.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+원본 디자인을 보면 메뉴 버튼 아래에 툴팁 메뉴가 생성되는데
+그게 아래에 있는 메뉴 버튼을 가리는 불상사가 발생하더라구요.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+그래서 왼쪽으로 툴팁 메뉴를 빼버렸습니다.
+근데 별로 맘에 안들어서, 나중에 원본대로 다시 아래쪽으로 빼버릴 수도 있습니다.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+테스트할 때는 배경에 일러스트를 박아넣었는데
+허락 없이 쓰면 안될거 같아가지고 그냥 그래디언트로 처리했어요.

@@ -8,10 +8,9 @@ Made a todo-list with react.js.
 Daily-Todos : [https://iborymagic.github.io/react-todo/](https://iborymagic.github.io/react-todo/)  
 <br />
 
-이쁜 todo list입니다.  
+리액트로 간단하게 만들어 본 todo list입니다.  
 Dribbble에 Jihye Leee님이 [멋진 디자인](https://dribbble.com/shots/3384144-Hello-Dribbble)을 올려놓으셔서  
-그걸 바탕으로 한 번 만들어봤습니다.  
-너그럽게도 흔쾌히 허락해주셨습니다. 감사합니당  
+해당 디자인을 바탕으로 한 번 만들어봤습니다.    
 
 1. Checkbox로 일 했는지 / 안했는지 체크
 2. Pin on the top / unpin : 중요한 건 상단에다 고정
@@ -19,8 +18,8 @@ Dribbble에 Jihye Leee님이 [멋진 디자인](https://dribbble.com/shots/33841
 4. Delete : 하기 싫어진 일은 바로 삭제
 5. Save lists in the localStorage : 과거의 기록을 보존
 
-원본 디자인과 다른 점이 있다면
-툴팁 메뉴가 아래의 버튼들을 가리길래
+원본 디자인과 다른 점이 있다면   
+툴팁 메뉴가 아래의 버튼들을 가려서   
 왼쪽으로 빼버렸습니다.  
 
 ---
